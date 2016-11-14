@@ -8,18 +8,16 @@
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <style>
       .message { font-size: 1.3em; font-weight: bold; }
-      .red{
-        color: #F44336;
-      }
-      .green{
-        color: #4CAF50;
-      }
+      .red{color: #F44336;}
+      .green{color: #4CAF50;}
+      .red input{border-color: #F44336;}
+      .green input{border-color: #4CAF50;}
     </style>
   </head>
 <body ng-controller="LunchCheckController">
    <div class="container">
      <h1>Lunch Checker</h1>
-         <div class="form-group">
+         <div class="form-group {{colorClass}}">
              <input id="lunch-menu" type="text"
              placeholder="list comma separated dishes you usually have for lunch"
             ng-model="lunch"
